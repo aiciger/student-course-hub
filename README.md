@@ -15,3 +15,17 @@ Minimalistisches Build- und Deployment-Setup für Java-Servlet-Anwendungen unter
 * `./undeploy.sh` – Entfernt die Anwendung vom Tomcat-Server.
 * `./list.sh` – Listet alle aktuell aktiven WebApps auf dem Tomcat-Server auf.
 * `./clean.sh` – Löscht das `build/`-Verzeichnis und erzeugte WAR-Dateien.
+
+## 📐 Architektur & Ablauf
+
+![Registrierungsablauf](docs/sequence-diagram.png)
+
+* **Sequenzdiagramm der Registrierung:** Darstellung des Datenflusses von der POST-Anfrage des Clients über das `RegisterServlet`, das Mapping via `PersonDTO` und den Datenbankzugriff mittels `PersonDAO`.
+
+---
+
+## 📊 Performance & Lasttest
+
+![Apache Benchmark Messung](docs/benchmark-graph.png)
+
+* **Lasttest-Analyse (Apache Benchmark):** Messung von durchgesetzten Registrierungen pro Sekunde unter hoher Koppelung (100 gleichzeitige Verbindungen, 20.000 Anfragen)[cite: 1]. Die Grafik zeigt eine stabile Systemleistung bei durchschnittlich 26 aktiven Threads und Reaktionszeiten von 5–10 ms.
