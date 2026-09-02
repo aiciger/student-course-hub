@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+  <Resource name="jdbc/mariadb" 
+    auth="Container" 
+    type="javax.sql.DataSource"
+    initialSize="10"
+    maxWaitMillis="5000"
+    username="swe3-21-team-a" 
+    password="CZuB0mKf9Q67bk8cq4bV" 
+    driverClassName="org.mariadb.jdbc.Driver"
+    url="jdbc:mariadb://mysql-server:3306/swe3-21-team-a_db" /> 
+
+</Context>
