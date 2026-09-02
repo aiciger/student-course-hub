@@ -18,7 +18,7 @@ Minimalistisches Build- und Deployment-Setup für Java-Servlet-Anwendungen unter
 
 ## 📐 Architektur & Ablauf
 
-![Registrierungsablauf](docs/sequence-diagram.png)
+![Registrierungsablauf](docs/sequenzdiagramm.png)
 
 * **Sequenzdiagramm der Registrierung:** Darstellung des Datenflusses von der POST-Anfrage des Clients über das `RegisterServlet`, das Mapping via `PersonDTO` und den Datenbankzugriff mittels `PersonDAO`.
 
@@ -26,6 +26,6 @@ Minimalistisches Build- und Deployment-Setup für Java-Servlet-Anwendungen unter
 
 ## 📊 Performance & Lasttest
 
-![Apache Benchmark Messung](docs/benchmark-graph.png)
+![Apache Benchmark Messung](docs/benchmark.png)
 
 * **Lasttest-Analyse (Apache Benchmark):** Messung von durchgesetzten Registrierungen pro Sekunde unter hoher Koppelung (100 gleichzeitige Verbindungen, 20.000 Anfragen)[cite: 1]. Die Grafik zeigt eine stabile Systemleistung bei durchschnittlich 26 aktiven Threads und Reaktionszeiten von 5–10 ms.
