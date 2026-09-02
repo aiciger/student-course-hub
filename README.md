@@ -1,37 +1,17 @@
-Sie haben in einem Verzeichnis
-das kleine tomcat-Kit installiert.
+# Tomcat Servlet Starter Kit
 
-Sie haben hier vier kleine Skripte:
+Minimalistisches Build- und Deployment-Setup für Java-Servlet-Anwendungen unter Apache Tomcat.
 
-- mkanddeploy.sh
-  kopiert app/* nach build,
-  kompiliert die java-Dateien in src
-  in das Verzeichnis build/WEB-INF/classes
-  hinein und deployt mit curl über die
-  manager-App in tomcat mit den
-  crendentials in .netrc
+## 📁 Projektstruktur
 
-- clean.sh
-  löscht das build-Verzeichnis 
-  und die war-Datei
+* `src/` – Java-Quellcode (Paket `hbv`)
+* `app/` – Deployment-Struktur (`web.xml`, HTML-Dateien, Laufzeit-Bibliotheken)
+* `complibs/` – JAR-Dateien für die Kompilierung (`servlet-api.jar`)
+* `build/` – Temporäres Build-Verzeichnis (wird automatisch erzeugt)
 
-- undeploy.sh
-  undeployt die App
+## 🛠 Shell-Skripte
 
-- list.sh
-  listet die aktiven WebApps auf
-
-In src liegt das java-Paket hbv
-mit Java-Beispieldateien.
-
-In app befindet sich die 
-Deployment-Struktur mit
-html-Dateien
-WEB-INF, web.xml
-und den notwendigen Bibliotheken
-für die Laufzeit.
-
-In complibs befinden sich die jars,
-die zum Compilieren notwendig sind:
-servlets. 
-
+* `./mkanddeploy.sh` – Baut das Projekt (`app/` → `build/`, Kompilierung von `src/` nach `build/WEB-INF/classes`) und deployt es via `curl` über die Tomcat Manager-App (Authentifizierung via `.netrc`).
+* `./undeploy.sh` – Entfernt die Anwendung vom Tomcat-Server.
+* `./list.sh` – Listet alle aktuell aktiven WebApps auf dem Tomcat-Server auf.
+* `./clean.sh` – Löscht das `build/`-Verzeichnis und erzeugte WAR-Dateien.
