@@ -41,5 +41,3 @@ out/
 # OS specific
 .DS_Store
 Thumbs.db
-
-app/META-INF/context.xml
