@@ -28,4 +28,4 @@ Minimalistisches Build- und Deployment-Setup für Java-Servlet-Anwendungen unter
 
 ![Apache Benchmark Messung](docs/benchmark.png)
 
-* **Lasttest-Analyse (Apache Benchmark):** Messung von durchgesetzten Registrierungen pro Sekunde unter hoher Koppelung (100 gleichzeitige Verbindungen, 20.000 Anfragen)[cite: 1]. Die Grafik zeigt eine stabile Systemleistung bei durchschnittlich 26 aktiven Threads und Reaktionszeiten von 5–10 ms.
+* **Lasttest-Analyse:** Messung von durchgesetzten Registrierungen pro Sekunde unter hoher Koppelung (100 gleichzeitige Verbindungen, 20.000 Anfragen). Die Grafik zeigt eine stabile Systemleistung bei durchschnittlich 26 aktiven Threads und Reaktionszeiten von 5–10 ms.
